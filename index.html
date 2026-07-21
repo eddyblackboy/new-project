@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page d'Introduction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      color: #ffffff;
+      background: radial-gradient(circle at top left, rgba(144, 202, 249, 0.22), transparent 32%),
+                  radial-gradient(circle at bottom right, rgba(236, 179, 8, 0.18), transparent 24%),
+                  linear-gradient(145deg, #061a40 0%, #0c234d 45%, #102a5f 100%);
+      font-family: 'Poppins', sans-serif;
+      font-smoothing: antialiased;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+
+    .hero {
+      width: min(100%, 980px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 28px;
+      padding: clamp(2rem, 3vw, 4rem);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.24);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8ab6fe;
+      margin-bottom: 1.5rem;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      background: rgba(138, 182, 254, 0.9);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 4vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: #ffffff;
+    }
+
+    p.subtitle {
+      margin: 1.5rem 0 2rem;
+      font-size: 1.2rem;
+      line-height: 1.9;
+      max-width: 760px;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      padding: 1rem 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #102a5f;
+      background: linear-gradient(135deg, #ffd369 0%, #ffb93c 100%);
+      text-decoration: none;
+      border-radius: 999px;
+      box-shadow: 0 18px 40px rgba(255, 181, 60, 0.28);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-button:hover,
+    .cta-button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 48px rgba(255, 181, 60, 0.35);
+    }
+
+    .details {
+      display: grid;
+      gap: 1.2rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.75);
+    }
+
+    .details span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.96rem;
+    }
+
+    .dot {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: #ffd369;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="eyebrow">Bonjour, je m'appelle</div>
+    <h1>Louise Renault</h1>
+    <p class="subtitle">Développeuse frontend passionnée par la conception d'interfaces élégantes et accessibles. J'aime transformer les idées en expériences ludiques, fluides et performantes, avec un souci constant pour le détail et l'ergonomie.</p>
+    <a href="#projects" class="cta-button">Voir mes projets</a>
+    <div class="details">
+      <span><span class="dot"></span>Spécialité : React, HTML5, CSS moderne, animation UI</span>
+      <span><span class="dot"></span>Objectif : Créer des sites clairs, rapides et mémorables pour les utilisateurs</span>
+      <span><span class="dot"></span>Passion : Typographie soignée, design responsive et optimisation mobile</span>
+    </div>
+  </section>
+</body>
+</html>
